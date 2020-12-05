@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>vote</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="login()">
+        Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="votechar" (ngSubmit)="vote()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Choose Favorite Hero</ion-label>
+      <ion-select formControlName="hero">
+        <ion-select-option>Ant-Man</ion-select-option>
+        <ion-select-option>Aquaman</ion-select-option>
+        <ion-select-option>Asterix</ion-select-option>
+        <ion-select-option>The Atom</ion-select-option>
+        <ion-select-option>The Avengers</ion-select-option>
+        <ion-select-option>Batgirl</ion-select-option>
+        <ion-select-option>Batman</ion-select-option>
+        <ion-select-option>Batwoman</ion-select-option>
+        <ion-select-option>Black Canary</ion-select-option>
+        <ion-select-option>Black Panther</ion-select-option>
+        <ion-select-option>Captain America</ion-select-option>
+        <ion-select-option>Captain Marvel</ion-select-option>
+        <ion-select-option>Catwoman</ion-select-option>
+        <ion-select-option>Conan the Barbarian</ion-select-option>
+        <ion-select-option>Daredevil</ion-select-option>
+        <ion-select-option>The Defenders</ion-select-option>
+        <ion-select-option>Doc Savage</ion-select-option>
+        <ion-select-option>Doctor Strange</ion-select-option>
+        <ion-select-option>Elektra</ion-select-option>
+        <ion-select-option>Fantastic Four</ion-select-option>
+        <ion-select-option>Ghost Rider</ion-select-option>
+        <ion-select-option>Green Arrow</ion-select-option>
+        <ion-select-option>Green Lantern</ion-select-option>
+        <ion-select-option>Guardians of the Galaxy</ion-select-option>
+        <ion-select-option>Hawkeye</ion-select-option>
+        <ion-select-option>Hellboy</ion-select-option>
+        <ion-select-option>Incredible Hulk</ion-select-option>
+        <ion-select-option>Iron Fist</ion-select-option>
+        <ion-select-option>Iron Man</ion-select-option>
+        <ion-select-option>Marvelman</ion-select-option>
+        <ion-select-option>Robin</ion-select-option>
+        <ion-select-option>The Rocketeer</ion-select-option>
+        <ion-select-option>The Shadow</ion-select-option>
+        <ion-select-option>Spider-Man</ion-select-option>
+        <ion-select-option>Sub-Mariner</ion-select-option>
+        <ion-select-option>Supergirl</ion-select-option>
+        <ion-select-option>Superman</ion-select-option>
+        <ion-select-option>Teenage Mutant Ninja Turtles</ion-select-option>
+        <ion-select-option>Thor</ion-select-option>
+        <ion-select-option>The Wasp</ion-select-option>
+        <ion-select-option>Watchmen</ion-select-option>
+        <ion-select-option>Wolverine</ion-select-option>
+        <ion-select-option>Wonder Woman</ion-select-option>
+        <ion-select-option>X-Men</ion-select-option>
+        <ion-select-option>Zatanna</ion-select-option>
+        <ion-select-option>Zatara</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Choose Favorite Villain</ion-label>
+      <ion-select formControlName="villain">
+        <ion-select-option>Abomination</ion-select-option>
+        <ion-select-option>Amanda Waller</ion-select-option>
+        <ion-select-option>Annihilus</ion-select-option>
+        <ion-select-option>Anti-Monitor</ion-select-option>
+        <ion-select-option>Apocalypse</ion-select-option>
+        <ion-select-option>Arthur Light</ion-select-option>
+        <ion-select-option>Bane</ion-select-option>
+        <ion-select-option>Baron Helmut Zemo</ion-select-option>
+        <ion-select-option>Bizarro</ion-select-option>
+        <ion-select-option>Black Adam</ion-select-option>
+        <ion-select-option>Brainiac</ion-select-option>
+        <ion-select-option>Bullseye as the assasin</ion-select-option>
+        <ion-select-option>Captain Cold</ion-select-option>
+        <ion-select-option>Carnage</ion-select-option>
+        <ion-select-option>Cassandra Nova</ion-select-option>
+        <ion-select-option>Catwoman</ion-select-option>
+        <ion-select-option>Cheetah (Minerva)</ion-select-option>
+        <ion-select-option>Clayface (Karlo)</ion-select-option>
+        <ion-select-option>Cyborg Superman</ion-select-option>
+        <ion-select-option>Darkseid</ion-select-option>
+        <ion-select-option>Deadshot</ion-select-option>
+        <ion-select-option>Deathstroke</ion-select-option>
+        <ion-select-option>Despero</ion-select-option>
+        <ion-select-option>Doctor Doom</ion-select-option>
+        <ion-select-option>Doctor Octopus</ion-select-option>
+        <ion-select-option>Doomsday</ion-select-option>
+        <ion-select-option>Dormammu</ion-select-option>
+        <ion-select-option>DrSivana</ion-select-option>
+        <ion-select-option>Electro</ion-select-option>
+        <ion-select-option>Eobard Thawne</ion-select-option>
+        <ion-select-option>Fin Fang Foom</ion-select-option>
+        <ion-select-option>Galactus</ion-select-option>
+        <ion-select-option>General Zod</ion-select-option>
+        <ion-select-option>Gorilla Grodd</ion-select-option>
+        <ion-select-option>Green Goblin</ion-select-option>
+        <ion-select-option>Grigori Rasputin</ion-select-option>
+        <ion-select-option>Harley Quinn</ion-select-option>
+        <ion-select-option>Herr Starr</ion-select-option>
+        <ion-select-option>Hobgoblin (Kingsley)</ion-select-option>
+        <ion-select-option>Hunter Rose</ion-select-option>
+        <ion-select-option>Joker</ion-select-option>
+        <ion-select-option>Juggernaut</ion-select-option>
+        <ion-select-option>Kang</ion-select-option>
+        <ion-select-option>Kid Marvelman</ion-select-option>
+        <ion-select-option>Kingpin</ion-select-option>
+        <ion-select-option>Kraven the Hunter</ion-select-option>
+        <ion-select-option>Lady Deathstrike</ion-select-option>
+        <ion-select-option>Leader</ion-select-option>
+        <ion-select-option>Lex Luthor</ion-select-option>
+        <ion-select-option>Lizard</ion-select-option>
+        <ion-select-option>Loki</ion-select-option>
+        <ion-select-option>Lucifer Morningstar</ion-select-option>
+        <ion-select-option>M.O.D.O.K.</ion-select-option>
+        <ion-select-option>Magneto</ion-select-option>
+        <ion-select-option>Magog</ion-select-option>
+        <ion-select-option>Mandarin</ion-select-option>
+        <ion-select-option>Mastermind</ion-select-option>
+        <ion-select-option>Mephisto</ion-select-option>
+        <ion-select-option>Metallo</ion-select-option>
+        <ion-select-option>Mirror Master (McCulloch)</ion-select-option>
+        <ion-select-option>Mongul</ion-select-option>
+        <ion-select-option>MrFreeze</ion-select-option>
+        <ion-select-option>MrMxyzptlk</ion-select-option>
+        <ion-select-option>MrSinister</ion-select-option>
+        <ion-select-option>Mysterio</ion-select-option>
+        <ion-select-option>Mystique</ion-select-option>
+        <ion-select-option>Omega Red</ion-select-option>
+        <ion-select-option>Omni-Man</ion-select-option>
+        <ion-select-option>Ozymandias</ion-select-option>
+        <ion-select-option>Parallax</ion-select-option>
+        <ion-select-option>Parasite</ion-select-option>
+        <ion-select-option>Penguin</ion-select-option>
+        <ion-select-option>Poison Ivy</ion-select-option>
+        <ion-select-option>Prometheus</ion-select-option>
+        <ion-select-option>Proteus</ion-select-option>
+        <ion-select-option>Ra's al Ghul</ion-select-option>
+        <ion-select-option>Red Skull</ion-select-option>
+        <ion-select-option>Riddler</ion-select-option>
+        <ion-select-option>Saint of Killers</ion-select-option>
+        <ion-select-option>Sandman</ion-select-option>
+        <ion-select-option>Scarecrow</ion-select-option>
+        <ion-select-option>Sebastian Shaw</ion-select-option>
+        <ion-select-option>Sentinels</ion-select-option>
+        <ion-select-option>Shade</ion-select-option>
+        <ion-select-option>Shredder</ion-select-option>
+        <ion-select-option>Sinestro</ion-select-option>
+        <ion-select-option>Talia al Ghul</ion-select-option>
+        <ion-select-option>Thanos</ion-select-option>
+        <ion-select-option>The Governor</ion-select-option>
+        <ion-select-option>Thunderbolt Ross</ion-select-option>
+        <ion-select-option>Two-Face</ion-select-option>
+        <ion-select-option>Ultron</ion-select-option>
+        <ion-select-option>Vandal Savage</ion-select-option>
+        <ion-select-option>Venom</ion-select-option>
+        <ion-select-option>Violator</ion-select-option>
+        <ion-select-option>William Stryker</ion-select-option>
+        <ion-select-option>Zoom</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-button expand="full" color="danger" type="submit" [disabled]="!votechar.valid">Vote!</ion-button>
+  </form>
+
+</ion-content>

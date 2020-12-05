@@ -1,0 +1,7 @@
+{
+  "name": "larionion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
